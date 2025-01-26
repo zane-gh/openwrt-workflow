@@ -92,3 +92,6 @@ jobs:
       with:
         name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
+
+    - name: Notification
+      run: curl https://bark.quadrant5808.work/y5DvTKAxdb9CncVXVCgwnH/Github/%E6%9E%84%E5%BB%BA%E5%AE%8C%E6%88%90?icon=https%3A%2F%2Fraw.githubusercontent.com%2Fzane-gh%2Fbark-icon%2Fmain%2Fgh.png&group=Github
