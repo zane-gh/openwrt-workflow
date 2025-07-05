@@ -15,8 +15,20 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
+    - name: Free disk space
+      uses: jlumbroso/free-disk-space@main
+      with:
+        tool-cache: true
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: true
+        swap-storage: true
+
     - name: Checkout
       uses: actions/checkout@main
+      with:
+        fetch-depth: 0
 
     - name: Initialization environment
       env:
